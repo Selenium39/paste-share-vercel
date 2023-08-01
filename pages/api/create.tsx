@@ -3,10 +3,10 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function (req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
-        const { text } = req.body;
+        const { id: customId, text } = req.body;
 
         // Generate a random ID
-        const id = Math.random().toString(36).substring(2, 8);
+        const id = customId || Math.random().toString(36).substring(2, 8);
 
         // Store the text in Vercel KV
         await kv.set(id, text);
