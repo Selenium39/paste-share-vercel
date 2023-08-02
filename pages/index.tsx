@@ -23,6 +23,7 @@ export default function Home() {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-200">
       <form className="p-10 bg-white rounded shadow-md w-1/2" onSubmit={handleSubmit}>
+      <h1 className="mb-4 text-2xl font-bold text-center">文本分享网站</h1>
         <input 
           type="text" 
           className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600" 
